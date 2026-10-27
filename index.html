@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Varun Sangani – design + research</title>
+<meta name="description" content="Portfolio of Varun Sangani, communication and spatial designer: research projects on social interaction in public space.">
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Newsreader-Regular.woff) format("woff")}
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/Newsreader-Medium.woff) format("woff")}
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/Newsreader-Bold.woff) format("woff")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/Newsreader-Italic.woff) format("woff")}
+</style>
+<style>
+:root{
+  --bg:#fafafa; --ink:#14315a; --mute:#3d6aa6; --line:#91c3fd; --accent:#288dff; --link:#1865c4; --note:#e6f1fe; --red:#c4343a;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1b2d;--ink:#e6f0fd;--mute:#91c3fd;--line:#3b5f8f;--accent:#5da8fe;--link:#91c3fd;--note:#1f3a5f;--red:#ff8a8f}
+}
+:root[data-theme="dark"]{--bg:#0f1b2d;--ink:#e6f0fd;--mute:#91c3fd;--line:#3b5f8f;--accent:#5da8fe;--link:#91c3fd;--note:#1f3a5f;--red:#ff8a8f}
+html{overflow-y:scroll;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:clamp(18px,.5vw + 16px,21px)/1.6 "Newsreader",ui-serif,"Times New Roman",serif}
+main{position:relative;max-width:660px;margin:0 auto;padding:clamp(32px,6vw,64px) clamp(18px,5vw,28px) 96px}
+h1,h2,h3,nav,.meta,.back{font-family:"Newsreader",ui-serif,"Times New Roman",serif}
+.q.themes{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent)}
+h1 a.homelink{color:inherit;text-decoration:none}
+h1{color:var(--accent);font-size:clamp(1.7rem,4vw + .8rem,2.2rem);font-weight:500;letter-spacing:-.01em;margin:0;line-height:1.15}
+h2{font-size:clamp(1.25rem,1.5vw + 1rem,1.5rem);font-weight:500;margin:0 0 .4rem;letter-spacing:-.01em;line-height:1.25}
+.subtitle{font-family:"Newsreader",ui-serif,"Times New Roman",serif;color:var(--mute);font-size:1.05rem;line-height:1.4;margin:0 0 .6rem}
+h3{font-size:1.05rem;font-weight:500;margin:0 0 .15rem}
+p{margin:0 0 1rem}
+.sub{font-family:"Newsreader",ui-serif,"Times New Roman",serif;color:var(--mute);margin:.25rem 0 2.25rem;font-size:1.1rem}
+a{color:var(--link);text-decoration:none;overflow-wrap:anywhere}
+a:hover,a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+nav a{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.1rem 1rem;padding:.55rem 0;color:var(--ink);border-bottom:1px solid var(--line)}
+nav a span{color:var(--mute);font-size:.9rem}
+nav a:hover{color:var(--accent);text-decoration:none}
+.list{margin:2.5rem 0 0;padding:0;list-style:none}
+.list li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.list small{display:block;color:var(--mute);font-family:"Newsreader",ui-serif,"Times New Roman",serif;font-size:.9rem}
+.end{margin-top:2.5rem}
+.meta{color:var(--mute);font-size:.92rem;margin:0 0 1.75rem}
+.back{font-size:.95rem;display:inline-block;padding:.5rem 0;margin-bottom:1.25rem}
+.q{background:var(--note);border-left:3px solid var(--accent);padding:.85rem 1.1rem;margin:1.1rem 0;border-radius:2px}
+.q h3{margin-bottom:.3rem;font-weight:700}
+.q p{margin:0 0 .6rem}
+.q p:last-child{margin:0}
+.note{color:var(--mute);font-size:.95rem}
+.projects a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;column-gap:1rem;padding:1.1rem 0;font-size:1.1rem;font-weight:500}
+.projects a span{text-align:right;white-space:nowrap}
+@media (max-width:340px){.projects a{grid-template-columns:1fr}.projects a span{text-align:left;white-space:normal}}
+.list li.job{display:grid;grid-template-columns:1fr auto;column-gap:1rem;align-items:baseline}
+.list li.job small{grid-column:1}
+.list li.job small.when{grid-column:2;grid-row:1;font-size:1rem;color:var(--mute);font-family:inherit;white-space:nowrap}
+@media (max-width:359px){.list li.job{grid-template-columns:1fr}.list li.job small.when{grid-column:1;grid-row:auto;white-space:normal;order:-1;margin-bottom:.15rem}}
+.pages{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;margin-top:4rem}
+.pages span{color:var(--mute);font-size:1.25rem}
+.pages a{display:inline;padding:0;border:0;color:var(--link);font-size:1.25rem}
+.pages a.legal{margin-left:auto;font-size:1rem;color:var(--mute)}
+.pages a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.grp{margin:2rem 0 0;font-size:1.05rem;font-weight:700}
+.grp.try{font-weight:400}
+.cover{margin:1.25rem 0}
+.ig{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;max-width:480px;margin:0 auto;background:#fff;color:#1d1d1f;border:1px solid #d2d2d7;border-radius:14px;overflow:hidden;--ink:#1d1d1f;--mute:#6e6e73;--line:#d2d2d7;--note:#fff;--red:#0071e3;--bg:#fff}
+.ig-head{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem}
+.ig-av{width:36px;height:36px;border-radius:9px;overflow:hidden;flex:none;display:block}
+.ig-who{flex:1;min-width:0;line-height:1.2}
+.ig-who b{display:block;font-size:.95rem;font-weight:500}
+.ig-who small{display:block;color:var(--mute);font-size:.8rem}
+.ig-art{display:block;width:100%;height:auto;flex:none}
+.ig-bar{display:flex;gap:.9rem;padding:.6rem .8rem .1rem}
+.ig-bar svg{width:24px;height:24px;fill:none;stroke:#1d1d1f;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.ig-likes{padding:0 .8rem;font-size:.88rem;font-weight:500;margin:.2rem 0}
+.ig-cap{padding:0 .8rem .8rem;font-size:.92rem;line-height:1.4}
+.ig-cap b{font-weight:500}
+.ig-cap .gloss{margin-top:.3rem;font-style:normal;font-size:.85rem}
+.pw{display:flex;flex-direction:column}
+.pw .ig{flex:1;display:flex;flex-direction:column}
+.pw .ig-cap{flex:1}
+.wb-ln{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.wb-cl{fill:none;stroke:var(--mute);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.wb-ground{fill:none;stroke:var(--line);stroke-width:2}
+.wb-bub{fill:var(--note);stroke:var(--line);stroke-width:2;stroke-linejoin:round}
+.wb-dot{fill:var(--red)}
+.product{--ink:#1d1d1f;--mute:#6e6e73;--line:#d2d2d7;--note:#f5f5f7;--bg:#fff;--link:#0071e3;--accent:#0058b0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;border:1px solid var(--line);border-radius:14px;padding:0;margin:1rem 0 1.5rem;overflow:hidden}
+.product .gloss{font-style:normal;font-size:.85rem}
+.product .co-h{font-size:.75rem}
+.co-head{display:flex;align-items:center;gap:1.1rem;padding:1.2rem 1.3rem;background:var(--note);border-bottom:1px solid var(--line)}
+.co-logo{flex:none;width:4rem;height:4rem;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.co-logo svg{display:block}
+.co-head p{margin:0;line-height:1.3}
+.co-head .gloss{line-height:1.35}
+.co-body{padding:1.1rem 1.3rem 1.2rem}
+.co-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(7.2rem,1fr));gap:.9rem 1.2rem;margin:0 0 1.1rem}
+.co-facts div{border-top:2px solid var(--line);padding-top:.4rem}
+.co-facts dt{margin:0;font-size:.82rem;color:var(--mute);letter-spacing:.02em}
+.co-facts dd{margin:.1rem 0 0;font-size:1.02rem;color:var(--ink)}
+.co-h{margin:0 0 .3rem;font-size:.82rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.co-body .co-h:not(:first-child){margin-top:1.3rem}
+.co-body p.about{margin:0 0 .35rem;font-size:.98rem;line-height:1.5}
+.co-foot{margin:1.2rem 0 0;padding-top:.8rem;border-top:1px solid var(--line);color:var(--mute);font-size:.85rem}
+@media (max-width:460px){.co-head{padding:1rem .9rem;gap:.8rem}.co-body{padding:1rem .9rem 1rem}.co-logo{width:3.4rem;height:3.4rem;border-radius:15px}}
+.product .brand{font-size:1.5rem;font-weight:500;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.product .tag{margin:.2rem 0 .15rem;font-size:1.02rem}
+.gloss{color:var(--mute);font-size:.92rem;font-style:italic;margin:0}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:stretch}
+.trio .ig{max-width:none;margin:0}
+.mlabel{display:block;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:.35rem}
+@media (max-width:700px){.trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.pw{flex:0 0 76%;scroll-snap-align:start}}
+.laptop{position:relative;max-width:600px;margin:1.2rem auto .3rem;container-type:inline-size}
+.stamp{position:absolute;z-index:1;top:-2.7rem;right:-30px;width:6.9rem;height:6.9rem;box-sizing:border-box;margin:0;padding:0 .6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;color:#c4343a;border:3px solid #c4343a;border-radius:50%;box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 6px #c4343a;text-align:center;line-height:1.15;text-transform:uppercase;letter-spacing:.05em;transform:rotate(9deg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,system-ui,sans-serif}
+.stamp b{display:block;font-size:1.05rem;letter-spacing:.1em}
+.stamp span{display:block;font-size:.56rem}
+@media (max-width:460px){.stamp{width:6.2rem;height:6.2rem;top:-3.2rem;right:-6px;padding:0 .5rem}.stamp b{font-size:.85rem;letter-spacing:.08em}.stamp span{font-size:.48rem}}
+.lap-screen{position:relative;background:var(--ink);border-radius:clamp(8px,2.2cqw,14px) clamp(8px,2.2cqw,14px) 0 0;padding:clamp(8px,2.2cqw,13px) clamp(5px,1.6cqw,9px) clamp(7px,1.8cqw,11px)}
+.lap-screen::before{content:"";position:absolute;top:clamp(2px,.8cqw,5px);left:50%;width:clamp(3px,.7cqw,4px);height:clamp(3px,.7cqw,4px);margin-left:-2px;border-radius:50%;background:var(--bg);opacity:.5}
+.site{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,system-ui,sans-serif;position:relative;isolation:isolate;display:flex;flex-direction:column;aspect-ratio:16/10;font-size:9px;font-size:clamp(9px,2.7cqw,16px);line-height:1.4;background:var(--bg);color:var(--ink);border-radius:3px;overflow:hidden;--ink:#14315a;--mute:#3d6aa6;--line:#91c3fd;--note:#e6f1fe;--bg:#fff;--link:#1865c4;--accent:#288dff}
+.site .gloss{font-style:normal;font-size:.85em}
+.site-bar{display:flex;align-items:center;gap:.35rem;background:var(--note);border-bottom:1px solid var(--line);padding:.35em .6em}
+.site-bar i{width:.55em;height:.55em;border-radius:50%;background:var(--line);flex:none}
+.site-bar span{margin-left:.5rem;flex:1;min-width:0;background:var(--bg);border-radius:999px;padding:.05em .7em;font-size:.78em;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.site-nav{display:flex;justify-content:space-between;align-items:center;gap:.5em;padding:.6em 1.1em .1em}
+.site-nav b{font-size:1.25em;font-weight:500}
+.site-nav small{color:var(--mute);font-size:.8em;white-space:nowrap;margin-left:auto}
+.site-body{flex:1;min-height:0;display:flex;flex-direction:column;padding:.4em 1.1em .9em}
+.lapcap{color:var(--mute);font-size:.88rem;line-height:1.45;margin:.9rem 0 0}
+.lap-base{position:relative;height:clamp(7px,2cqw,12px);margin:0 calc(-1*clamp(8px,3.2cqw,20px));background:linear-gradient(var(--line),color-mix(in srgb,var(--line) 70%,var(--ink)));border-radius:0 0 clamp(8px,2.6cqw,16px) clamp(8px,2.6cqw,16px)}
+.lap-base::after{content:"";position:absolute;left:50%;top:0;width:clamp(44px,16cqw,96px);height:clamp(3px,.9cqw,5px);transform:translateX(-50%);background:var(--ink);opacity:.35;border-radius:0 0 8px 8px}
+.complaint{flex:1;min-height:0;display:flex;flex-direction:column}
+.complaint label{display:block;font-weight:700;margin-bottom:.3em;white-space:nowrap;font-size:min(1em,2.4cqw)}
+.cmp-row{display:flex;gap:.5em;align-items:stretch}
+.complaint textarea{flex:1;min-width:0;box-sizing:border-box;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.4em .6em;height:3.4em;resize:none}
+@media (pointer:coarse){.complaint textarea{font-size:16px}}
+.complaint button{flex:none;font:inherit;color:var(--bg);background:var(--link);border:0;border-radius:4px;padding:0 1em;cursor:pointer}
+.complaint button:hover{background:var(--accent)}
+.complaint .fine{color:var(--mute);font-size:.9em;margin:.4em 0 0}
+.reply{flex:1;min-height:0;overflow:auto;margin-top:.6em;padding:.5em .8em;border:1px dashed var(--line);border-radius:10px;background:var(--note);line-height:1.35;overflow-wrap:anywhere}
+.reply.has{border-style:solid;border-left:3px solid var(--accent);border-radius:4px 10px 10px 4px}
+.reply p{margin:0 0 .3em}
+.reply p:last-child{margin:0}
+.reply .ph{color:var(--mute)}
+.reply p:first-child{font-size:.95em}
+
+.site.m-apple{--ink:#1d1d1f;--mute:#6e6e73;--line:#d2d2d7;--note:#f5f5f7;--bg:#fff;--link:#0071e3;--accent:#0058b0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+.m-apple .site-bar{background:#f5f5f7;border-bottom:1px solid var(--line)}
+.m-apple .site-bar span{background:#fff}
+.m-apple .site-nav{padding:.7em 1.4em .5em}
+.site-brand{display:flex;align-items:center;gap:.55em}
+.site-ico{flex:none;width:1.7em;height:1.7em;border-radius:.4em;overflow:hidden}
+.m-apple .site-nav b{font-size:1.1em;font-weight:500;letter-spacing:-.01em}
+.m-apple .site-nav small{color:var(--mute)}
+.m-apple .site-body{padding:.2em 1.4em .9em;text-align:center}
+.m-apple .hero{margin:.15em 0 .55em;font-size:1.6em;font-weight:700;letter-spacing:-.025em;line-height:1.1}
+.m-apple .complaint label{font-weight:600;font-size:min(1em,2.3cqw)}
+.m-apple .complaint textarea{border:1px solid #86868b;border-radius:12px;background:#fff;text-align:left}
+.m-apple .complaint button{border-radius:999px;font-weight:500;padding:0 1.2em}
+.m-apple .complaint .fine{color:var(--mute);white-space:nowrap;font-size:min(.9em,2cqw);margin:.55em 0 0}
+.m-apple .reply,.m-apple .reply.has{border:0;border-radius:14px;background:var(--note);text-align:left}
+@container (max-width:420px){.m-apple .hero{display:none}}
+@container (max-width:520px){.site .fine{display:none}}
+@container (max-width:420px){.site-nav small{display:none}.site{aspect-ratio:3/2}.complaint textarea{height:2.7em}}
+@container (max-width:290px){.site{aspect-ratio:4/3}}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 1.75rem;padding:1.5rem 0 .5rem}
+.lvl{position:relative;border-top:1px solid var(--red);padding-top:1.1rem}
+.lvl i{position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--red)}
+.lvl small{display:block;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
+.lvl strong{display:block;font-size:1.45rem;line-height:1.2;font-weight:500;letter-spacing:-.01em;color:var(--ink);margin-bottom:.5rem}
+.lvl span{display:block;font-size:.98rem;line-height:1.45;color:var(--ink)}
+@media (max-width:620px){.levels{grid-template-columns:1fr;gap:1.6rem 0}.lvl strong{font-size:1.35rem}}
+.cover img{display:block;width:100%;height:auto;border-radius:2px}
+.cover figcaption{font-family:"Newsreader",ui-serif,"Times New Roman",serif;color:var(--mute);font-size:.9rem;line-height:1.4;margin-top:.6rem}
+.theme{position:absolute;top:calc(clamp(32px,6vw,64px) - 2px);right:calc(clamp(18px,5vw,28px) - 14px);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;border-radius:50%;cursor:pointer;padding:0}
+.theme span{width:16px;height:16px;border-radius:50%;background:var(--ink)}
+.theme:hover span{background:var(--accent)}
+.theme:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem}
+.top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--link);cursor:pointer;padding:0}
+.no-top .top{display:none}
+.top:hover{color:var(--accent);border-color:var(--accent)}
+.top:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{display:none}
+section.on{display:block}
+@media (prefers-reduced-motion:no-preference){section.on{animation:in .25s ease-out}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<main>
+
+<section id="home">
+  <h1><a href="#home" class="homelink">Varun Sangani</a></h1>
+  <p class="sub">design + research</p>
+  <nav class="projects" aria-label="Projects">
+    <a href="#wetterbank">Wetterbank <span>Design fiction, 2026</span></a>
+    <a href="#agile">Agile project management at RWE <span>Master’s thesis, 2025</span></a>
+    <a href="#kalink">KaLink <span>Applied research project, 2024</span></a>
+    <a href="#speculation">Stri Mandala <span>Speculative design, 2022</span></a>
+    <a href="#protests">Spatialising Protests <span>Bachelor’s thesis, 2021</span></a>
+  </nav>
+  <nav class="pages" aria-label="Pages">
+    <a href="#about">About</a>
+    <span aria-hidden="true">·</span>
+    <a href="#cv">CV</a>
+    <span aria-hidden="true">·</span>
+    <a href="#contact">Contact</a>
+    <a class="legal" href="#impressum">Impressum</a>
+  </nav>
+
+</section>
+
+<section id="protests">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Spatialising Protests</h2>
+  <p class="subtitle">Perceiving the role of urban public spaces in the culture of dissent in New Delhi, India</p>
+  <p class="meta">Bachelor’s thesis, Navrachana University · 2021 · supervisor: <a href="https://pratyushshankar.com" target="_blank" rel="noopener">Prof. Pratyush Shankar</a></p>
+  <figure class="cover"><img src="jantar-mantar.jpg" alt="A crowd of protesters at Jantar Mantar, overlaid with the outline of the stone staircase of the observatory" width="596" height="333"><figcaption>Protesters at Jantar Mantar in New Delhi, layered with the outline of the site’s architecture.</figcaption></figure>
+  <div class="q themes"><h3>Themes</h3>
+    <p>Urban public space · Social encounters · Collective behaviour · Qualitative research · Space syntax</p></div>
+  <div class="q"><h3>Question</h3>
+    <p>How can a city support or inhibit protest through its spatial characteristics? And how did Jantar Mantar become the “protest square” of India’s capital?</p></div>
+  <div class="q"><h3>Method</h3>
+    <p>I traced how Delhi’s protest sites moved from the old city to Lutyens’ Delhi, using historical maps and secondary literature. I then compared two sites, Jantar Mantar and the Boat Club Lawns, with space syntax analysis (visibility graph and agent-based analysis), site photographs from January 2021 and informal conversations. The work is qualitative.</p></div>
+  <div class="q"><h3>What I found</h3>
+    <p>Governments have repeatedly moved the official protest site farther from the political centre: first from the Boat Club to Jantar Mantar, after a mass farmers’ occupation in 1988.</p>
+    <p>The two sites shape crowds differently. Jantar Mantar sits among small blocks and alleys, so a crowd spills into the streets and is hard to contain. The Boat Club has large blocks and few entrances, so the crowd is bounded and easier to control. Symbolic value draws people in, but the surrounding street layout shapes how the crowd behaves and how the state responds.</p>
+    <p>I also drew four ways people occupy space when they protest: occupy, monument, agora and shelter.</p></div>
+  <div class="q"><h3>What I would do next</h3>
+    <p>The thesis calls its findings a preliminary step. The next step is to watch how people actually use these spaces, not only how the maps describe them.</p></div>
+  <p class="end"><a href="https://zenodo.org/records/22127782?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjRiODFkYTY1LWRjZGUtNDRiOS05ZjI2LWU0OTgwMzg3NjBhNSIsImRhdGEiOnt9LCJyYW5kb20iOiI5MDBjNWJlOGQ4MDQ3YTA4MjY0YzY1YTc2NGE5NjVkYiJ9.A0bPti_e4lynKm_nRA3docEJvtQUxT9M2SCFDl0xiq0uMkMX0XaRKAcOn1biA9gj1lHdkF21-OtWhGxYvA8BbA" target="_blank" rel="noopener">Read the full thesis here</a>.</p>
+</section>
+
+<section id="agile">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Investigating the challenges of Agile Project Management at RWE</h2>
+  <p class="meta">Master’s thesis, Hochschule Rhein-Waal · 2025 · with <a href="https://ayushbhamu.design/index.html" target="_blank" rel="noopener">Ayush Bhamu</a> · supervisors: <a href="https://www.researchgate.net/profile/Kai-Essig" target="_blank" rel="noopener">Prof. Dr. Kai Essig</a>, <a href="https://www.linkedin.com/in/jan-ely/" target="_blank" rel="noopener">Mr. Jan Ely</a></p>
+  <figure class="cover" role="group" aria-label="Challenges of adopting Scrum at RWE at three levels">
+    <div class="levels">
+      <div class="lvl"><i></i><small>Management</small><strong>Top-down control</strong><span>Scope, time and capacity are set from above.</span></div>
+      <div class="lvl"><i></i><small>Team</small><strong>Scope churn</strong><span>Plans change in the middle of a sprint.</span></div>
+      <div class="lvl"><i></i><small>Individual</small><strong>Less autonomy</strong><span>Motivation dips when people feel over-controlled.</span></div>
+    </div>
+    <figcaption>Challenges of adopting Scrum at RWE, at three levels: management, team and individual.</figcaption></figure>
+  <div class="q themes"><h3>Themes</h3>
+    <p>Human-computer interaction · Qualitative research · Interviews · Thematic analysis · Collaboration and organisational culture</p></div>
+  <div class="q"><h3>Question</h3>
+    <p>What challenges come up when a large German energy company adopts Scrum, and which structural and cultural factors push teams back to plan-driven ways of working?</p></div>
+  <div class="q"><h3>Method</h3>
+    <p>An embedded single-case study at RWE with nine semi-structured interviews: developers, solution managers, a product owner, UX/UI designers and a team lead. We coded the transcripts together using reflexive thematic analysis, and grouped the results at management, team and individual level. We treated recordings as personal data under GDPR and masked names, projects and dates.</p></div>
+  <div class="q"><h3>What we found</h3>
+    <p>Many teams ran Scrum events but kept top-down decision-making: Agile on paper. Scope changed mid-Sprint, approvals arrived after work was marked done, and roles and coaching were unclear. Teams doing feature work and interrupt-driven work in the same Sprint often fit Kanban better than Scrum.</p>
+    <p>Agile lasts when governance, funding and compliance move at the same pace as iteration, and when leaders back team autonomy and learning.</p></div>
+  <div class="q"><h3>Limits</h3>
+    <p>One organisation, nine interviews, and no delivery metrics or direct observation of ceremonies, so the findings should be transferred with care.</p></div>
+  <p class="end"><a href="https://zenodo.org/records/22128207?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImM0OWRiMzNhLWVmZjktNDhjMC04MzQ1LWI2MzBkZjYxZTY1ZSIsImRhdGEiOnt9LCJyYW5kb20iOiI1ZjZkZGVjMjhiZmY0ZDg4Mzg5OTRjYmJmYWUxOTFlZiJ9.veiagh0m_38-bIs0yg-XtSt1n8t1V4Ugid-sojjLd4yh62rXfqxfnHVpCeoUqk3n4trP8FZmIFQ5A49yGUeJxQ" target="_blank" rel="noopener">Read the full thesis here</a>.</p>
+</section>
+
+<section id="speculation">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Stri Mandala</h2>
+  <p class="meta">Design competition “rip. mix. burn.” · 2022 · with <a href="https://www.linkedin.com/in/pranjali-ambekar-444a3240/" target="_blank" rel="noopener">Pranjali Ambekar</a> · <a href="https://formfolio.in/portfolio/stri-mandala-varun-sangani-pranjali-ambekar/" target="_blank" rel="noopener">published on FOLIO</a></p>
+  <figure class="cover"><img src="stri-mandala.jpg" alt="Black, white and grey illustration: a map of Jaipur laid out like a rug, with five seated women around it and hands weaving at the loom edge on the right" width="1400" height="990"><figcaption>Stri Mandala: a map of Jaipur drawn as a rug, with women seated around it and hands weaving at the edge of the loom.</figcaption></figure>
+  <div class="q themes"><h3>Themes</h3><p>Speculative design · Gender-inclusive public space · Right to the city · Urban futures · Visual critique</p></div>
+  <div class="q"><h3>Reading the title</h3><p><span lang="hi">स्त्री</span> (<i>strī</i>) is the Sanskrit and Hindi word for “woman”. <span lang="hi">मण्डल</span> (<i>maṇḍala</i>) means “circle”. A mandala is a geometric, circular or square design that stands for the universe, wholeness and spiritual balance in Hinduism, Buddhism and Jainism. So the title reads “circle of women”: women as the centre that holds a city together.</p></div>
+  <div class="q"><h3>Brief</h3><p>The competition “rip. mix. burn.” asked entrants to use drawing to critique the existing city and reimagine the future city. We chose to ask what kind of space supports a woman’s growth as an individual, within a community and in a progressive society, and to argue for gender-inclusive public space.</p></div>
+  <div class="q"><h3>What the drawing shows</h3><p>The map of Jaipur is drawn as a rug. Women sit around it, weaving it. Jaipur is known for its hand-made rugs, so the drawing also shows the fine detail and patterns of that craft. The idea is that women have woven many Indian cities through their work, and that this contribution is rarely recognised. The map is the fabric, and the weavers are the ones who made it.</p></div>
+  <div class="q"><h3>Why a drawing</h3><p>The drawing does not predict a future. It asks who a city is made by and for, and it makes the answer visible: the right to the city is shaped by gender, and the people shaping it are often not seen. I see this as a first step toward speculative design: a deliberately imagined scene that makes a social question easy to discuss.</p></div>
+  <p class="end"><a href="https://formfolio.in/portfolio/stri-mandala-varun-sangani-pranjali-ambekar/" target="_blank" rel="noopener">Read more about the project here</a>.</p>
+</section>
+
+<section id="wetterbank">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Wetterbank</h2>
+  <p class="meta">Design fiction · 2026 · self-initiated</p>
+  <p>Wetterbank is a fictional smart bench that starts conversations between strangers. It uses the one topic Germans never seem to run out of, <i>the weather</i>, and leads people from there to each other’s names.</p>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <g id="wb-bench"><path class="wb-ground" d="M40 222H560"/><rect class="wb-ln" x="210" y="112" width="180" height="14" rx="3"/><path class="wb-ln" d="M228 126v24M372 126v24"/><rect class="wb-ln" x="190" y="150" width="220" height="16" rx="3"/><path class="wb-ln" d="M206 166v56M394 166v56"/><circle class="wb-dot" cx="372" cy="119" r="4.5"/></g>
+    <g id="wb-person"><circle class="wb-ln" cx="290" cy="84" r="13"/><path class="wb-ln" d="M290 97v53M290 150h28v52M290 112L306 130L316 148"/></g>
+    <g id="wb-cloud"><path class="wb-cl" d="M70 92a22 22 0 0 1 4-43 28 28 0 0 1 52 6 18 18 0 0 1-2 37z"/><path class="wb-cl" d="M86 106v14M102 106v14M118 106v14"/></g>
+    <g id="wb-sun"><circle class="wb-cl" cx="100" cy="82" r="18"/><path class="wb-cl" d="M100 48v10M100 106v10M66 82h10M124 82h10M76 58l7 7M117 99l7 7M124 58l-7 7M83 99l-7 7"/></g>
+  </defs></svg>
+  <figure class="cover">
+    <div class="trio" role="region" aria-label="Three fictional Instagram posts, one per mode" tabindex="0">
+    <div class="pw"><small class="mlabel">Modus 1 · Wetter</small><div class="ig"><div class="ig-head"><svg class="ig-av" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="url(#wbico)"/><circle cx="21" cy="17" r="8" fill="#ffd60a"/><g fill="#fff"><circle cx="38" cy="17" r="7.5"/><circle cx="30" cy="20" r="5.5"/><circle cx="46" cy="20" r="5.5"/><rect x="28" y="19" width="24" height="6.5" rx="3.2"/></g><polyline points="12,34 22,57 32,40 42,57 52,34" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ig-who"><b>wetterbank</b><small>Gesponsert</small></div></div><svg class="ig-art" viewBox="0 0 360 450" role="img" aria-label="Fake social media post, mode 1. Headline '7:42. Regen. Stille.' A bench under a rain cloud says 'Bisschen frisch heute, oder?'"><rect width="360" height="450" fill="#f5f5f7"/><text x="24" y="56" font-size="28" font-weight="600" style="fill:#1d1d1f;font-family:inherit">7:42. Regen. Stille.</text><text x="24" y="84" font-size="19" style="fill:#6e6e73;font-family:inherit">Das ändern wir. Leider.</text><rect class="wb-bub" x="24" y="116" width="312" height="58" rx="12"/><path class="wb-bub" d="M201 174L225 252L249 174"/><path d="M202.5 174H247.5" stroke="#fff" stroke-width="3" fill="none"/><text x="40" y="141" font-size="19" style="fill:#1d1d1f;font-family:inherit">Bisschen frisch</text><text x="40" y="162" font-size="19" style="fill:#1d1d1f;font-family:inherit">heute, oder?</text><g transform="translate(-6 190) scale(.62)"><use href="#wb-cloud"/><use href="#wb-bench"/></g><text x="180" y="384" text-anchor="middle" font-size="20" font-weight="500" style="fill:#1d1d1f;font-family:inherit">Sitzen kostet nichts.</text><text x="180" y="438" text-anchor="middle" font-size="12" style="fill:#6e6e73;font-family:inherit">Wetterbank® · Die Bank, die immer etwas zu sagen hat.</text></svg><div class="ig-bar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><svg viewBox="0 0 24 24"><path d="M3 11l18-8-7 18-3-8z"/></svg></div><p class="ig-likes">Gefällt 1.204 Personen</p><div class="ig-cap"><b>wetterbank</b> 7:42 Uhr. Regen. Totenstille. Bis die Bank das Wort ergreift. #Wetterbank #BisschenFrisch<p class="gloss">7:42. Rain. Dead silence. Until the bench takes the floor.</p></div></div></div>
+    <div class="pw"><small class="mlabel">Modus 2 · Meckern</small><div class="ig"><div class="ig-head"><svg class="ig-av" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="url(#wbico)"/><circle cx="21" cy="17" r="8" fill="#ffd60a"/><g fill="#fff"><circle cx="38" cy="17" r="7.5"/><circle cx="30" cy="20" r="5.5"/><circle cx="46" cy="20" r="5.5"/><rect x="28" y="19" width="24" height="6.5" rx="3.2"/></g><polyline points="12,34 22,57 32,40 42,57 52,34" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ig-who"><b>wetterbank</b><small>Gesponsert</small></div></div><svg class="ig-art" viewBox="0 0 360 450" role="img" aria-label="Fake social media post, mode 2. Headline 'Schon wieder zu kalt?' A person on a bench under a rain cloud hears 'Ihre Beschwerde wurde an das Wetter weitergeleitet.' A red stamp reads 'Bearbeitungszeit: unbestimmt'."><rect width="360" height="450" fill="#f5f5f7"/><text x="24" y="56" font-size="28" font-weight="600" style="fill:#1d1d1f;font-family:inherit">Schon wieder zu kalt?</text><text x="24" y="84" font-size="19" style="fill:#6e6e73;font-family:inherit">Dann sagen Sie’s der Bank.</text><rect class="wb-bub" x="24" y="116" width="312" height="58" rx="12"/><path class="wb-bub" d="M150 174L174 226L198 174"/><path d="M151.5 174H196.5" stroke="#fff" stroke-width="3" fill="none"/><text x="40" y="141" font-size="19" style="fill:#1d1d1f;font-family:inherit">Ihre Beschwerde wurde an</text><text x="40" y="162" font-size="19" style="fill:#1d1d1f;font-family:inherit">das Wetter weitergeleitet.</text><g transform="translate(-6 190) scale(.62)"><use href="#wb-cloud"/><path class="wb-cl" stroke-dasharray="5 6" d="M196 128C170 98 150 98 128 114"/><rect class="wb-cl" x="148" y="82" width="26" height="17" rx="2"/><path class="wb-cl" d="M148 83l13 9 13-9"/><use href="#wb-bench"/><use href="#wb-person"/></g><g transform="translate(180 384) rotate(-6)"><rect x="-104" y="-28" width="208" height="56" rx="6" fill="none" stroke="#0058b0" stroke-width="3"/><text x="0" y="-6" text-anchor="middle" font-size="12" letter-spacing="1.5" style="fill:#0058b0;font-family:inherit">BEARBEITUNGSZEIT:</text><text x="0" y="17" text-anchor="middle" font-size="22" font-weight="700" style="fill:#0058b0;font-family:inherit">UNBESTIMMT</text></g><text x="180" y="438" text-anchor="middle" font-size="12" style="fill:#6e6e73;font-family:inherit">Wetterbank® · Die Bank, die immer etwas zu sagen hat.</text></svg><div class="ig-bar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><svg viewBox="0 0 24 24"><path d="M3 11l18-8-7 18-3-8z"/></svg></div><p class="ig-likes">Gefällt 873 Personen</p><div class="ig-cap"><b>wetterbank</b> Beschwerde einreichen, Formular 38b. Wir leiten sie weiter. An wen, sagen wir nicht. Meckern ist Bürgerpflicht. #Meckerbank<p class="gloss">File a complaint, form 38b. We’ll forward it. To whom, we won’t say. Grumbling is a civic duty.</p></div></div></div>
+    <div class="pw"><small class="mlabel">Modus 3 · Namen</small><div class="ig"><div class="ig-head"><svg class="ig-av" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="url(#wbico)"/><circle cx="21" cy="17" r="8" fill="#ffd60a"/><g fill="#fff"><circle cx="38" cy="17" r="7.5"/><circle cx="30" cy="20" r="5.5"/><circle cx="46" cy="20" r="5.5"/><rect x="28" y="19" width="24" height="6.5" rx="3.2"/></g><polyline points="12,34 22,57 32,40 42,57 52,34" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ig-who"><b>wetterbank</b><small>Gesponsert</small></div></div><svg class="ig-art" viewBox="0 0 360 450" role="img" aria-label="Fake social media post, mode 3. Headline 'Genug vom Wetter?' A person sits on a bench in the sun. The bench says 'Okay, genug Wetter. Ich bin die Bank. Und Sie?'"><rect width="360" height="450" fill="#f5f5f7"/><text x="24" y="56" font-size="28" font-weight="600" style="fill:#1d1d1f;font-family:inherit">Genug vom Wetter?</text><text x="24" y="84" font-size="19" style="fill:#6e6e73;font-family:inherit">Jetzt wird’s persönlich.</text><rect class="wb-bub" x="24" y="116" width="312" height="58" rx="12"/><path class="wb-bub" d="M150 174L174 226L198 174"/><path d="M151.5 174H196.5" stroke="#fff" stroke-width="3" fill="none"/><text x="40" y="141" font-size="19" style="fill:#1d1d1f;font-family:inherit">Okay, genug Wetter.</text><text x="40" y="162" font-size="19" style="fill:#1d1d1f;font-family:inherit">Ich bin die Bank. Und Sie?</text><g transform="translate(-6 190) scale(.62)"><use href="#wb-sun"/><use href="#wb-bench"/><use href="#wb-person"/></g><text x="180" y="384" text-anchor="middle" font-size="20" font-weight="500" style="fill:#1d1d1f;font-family:inherit">Platz nehmen. Vorname genügt.</text><text x="180" y="438" text-anchor="middle" font-size="12" style="fill:#6e6e73;font-family:inherit">Wetterbank® · Die Bank, die immer etwas zu sagen hat.</text></svg><div class="ig-bar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><svg viewBox="0 0 24 24"><path d="M3 11l18-8-7 18-3-8z"/></svg></div><p class="ig-likes">Gefällt 2.311 Personen</p><div class="ig-cap"><b>wetterbank</b> Vom Wetter zum Vornamen in drei Schritten. Das Du bieten wir erst nach 20 Minuten an. #Wetterbank #Vornamen<p class="gloss">From weather to first names in three steps. The informal “du” is offered only after 20 minutes.</p></div></div></div>
+    </div>
+    <figcaption>Wetterbank GmbH Instagram posts, one per mode. Any resemblance to real benches is coincidental: real benches rarely say anything, which is the whole problem.</figcaption>
+  </figure>
+  <div class="q themes"><h3>Themes</h3>
+    <p>Design fiction · Smart street furniture · Social encounters · Small talk · Humour as critique</p></div>
+  <div class="q"><h3>Question</h3>
+    <p>When a machine takes over the safest opener in German small talk, does it help strangers get past the weather, or does it replace the awkward step?</p></div>
+  <div class="q"><h3>The real starting point</h3>
+    <p>Germans talk about the weather a lot: 62% do so several times a week or more, 29% daily, and only 4% never (YouGov, 3,290 adults, April 2026). It is also the most accepted small-talk topic, at 70% (Babbel/YouGov, 2025). Yet 48.5% of 18–24-year-olds find small talk uncomfortable, and 18–29-year-olds carry the highest loneliness burden (14.1% in 2021, Einsamkeitsbarometer 2024).</p>
+    <p>My reading: the opener is easy, the step after it is hard. Wetterbank is built for that step. I found no survey on how often Germans complain about the weather, so that mode takes the stereotype at its word. Either nobody has asked, or the respondents complained about the survey.</p>
+    <p class="gloss">Sources: <a href="https://yougov.com/de-de/aktuelle-ergebnisse/20260414-e9f72-2" target="_blank" rel="noopener">YouGov</a>, <a href="https://www.t-online.de/leben/aktuelles/id_100690286/small-talk-mit-diesen-themen-machen-sie-sich-unbeliebt-umfrage.html" target="_blank" rel="noopener">t-online / Babbel</a>, <a href="https://www.bmbfsfj.bund.de/bmbfsfj/aktuelles/alle-meldungen/erstes-einsamkeitsbarometer-fuer-deutschland-veroeffentlicht-240202" target="_blank" rel="noopener">Einsamkeitsbarometer 2024</a></p></div>
+  <div class="q"><h3>The idea</h3>
+    <p>The bench has three modes, each one step further from the safe topic:</p>
+    <ol style="margin:.2rem 0 0;padding-left:1.3rem">
+      <li><b>Wetter (weather)</b> – the bench opens with the safest line there is, a remark about the weather.</li>
+      <li><b>Meckern (complaining)</b> – it takes complaints about the weather and “forwards” them, so grumbling together becomes a small bond.</li>
+      <li><b>Namen (names)</b> – it drops the weather and asks for a name, pushing strangers one step further.</li>
+    </ol>
+    <p style="margin:.8rem 0 0">What it asks: does a bench that speaks first make it easier to talk to strangers, or does it do the awkward part for us? Is a bench asking for your name friendly or nosy? And what happens when someone sells you the first sentence?</p></div>
+  <div class="product">
+    <div class="co-head">
+      <div class="co-logo" aria-hidden="true"><svg viewBox="0 0 64 64" width="100%" height="100%"><defs><linearGradient id="wbico" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5cb0ff"/><stop offset="1" stop-color="#0a6cdc"/></linearGradient></defs><rect width="64" height="64" fill="url(#wbico)"/><circle cx="21" cy="17" r="8" fill="#ffd60a"/><g fill="#fff"><circle cx="38" cy="17" r="7.5"/><circle cx="30" cy="20" r="5.5"/><circle cx="46" cy="20" r="5.5"/><rect x="28" y="19" width="24" height="6.5" rx="3.2"/></g><polyline points="12,34 22,57 32,40 42,57 52,34" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div>
+        <p class="brand">Wetterbank®</p>
+        <p class="tag">Die Bank, die immer etwas zu sagen hat.</p>
+        <p class="gloss">The bench that always has something to say.</p>
+      </div>
+    </div>
+    <div class="co-body">
+      <h4 class="co-h">Über uns <span class="gloss" style="text-transform:none;letter-spacing:0">(about us)</span></h4>
+      <p class="about">Wetterbank GmbH ist ein Düsseldorfer Unternehmen für sprechende Straßenmöbel. Gegründet 2031 nach einer Straßenbahnverspätung, in der 40 Minuten lang niemand ein Wort sagte.</p>
+      <p class="gloss">Wetterbank GmbH, Düsseldorf, founded 2031 after a 40-minute tram delay in which nobody said a word.</p>
+      <h4 class="co-h">Online-Auftritt <span class="gloss" style="text-transform:none;letter-spacing:0">(our website)</span></h4>
+    <div class="laptop">
+      <div class="lap-screen"><div class="site m-apple">
+        <div class="site-bar" aria-hidden="true"><i></i><i></i><i></i><span>wetterbank.example</span></div>
+        <div class="site-nav"><span class="site-brand"><svg class="site-ico" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="url(#wbico)"/><circle cx="21" cy="17" r="8" fill="#ffd60a"/><g fill="#fff"><circle cx="38" cy="17" r="7.5"/><circle cx="30" cy="20" r="5.5"/><circle cx="46" cy="20" r="5.5"/><rect x="28" y="19" width="24" height="6.5" rx="3.2"/></g><polyline points="12,34 22,57 32,40 42,57 52,34" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Wetterbank®</b></span><small aria-hidden="true">Modi · Standorte · Beschwerden</small></div>
+        <div class="site-body">
+          <p class="hero" aria-hidden="true">Sag’s dem Wetter.</p>
+          <form class="complaint" id="complaint">
+            <label for="cmp">Beschwerde über das Wetter einreichen <span class="gloss">(file a complaint about the weather)</span></label>
+            <div class="cmp-row"><textarea id="cmp" placeholder="Das Wetter ist …"></textarea><button type="submit">Einreichen</button></div>
+            <p class="fine">Your complaint is neither sent nor stored. The weather has enough to deal with already.</p>
+            <div class="reply" aria-live="polite"><p class="ph">Die Antwort der Bank erscheint hier.</p><p class="gloss">The bench’s reply appears here.</p></div>
+          </form>
+        </div>
+      </div></div>
+      <div class="lap-base" aria-hidden="true"></div>
+    </div>
+    <p class="lapcap">You cannot be near a bench all the time, so this website shows how the bench would respond. Type a complaint and see what comes back. Feel free to play with it. It is Datenschutz-safe: nothing you type is sent or stored.</p>
+    <p class="co-foot">© 2031 Wetterbank GmbH · Alle Rechte vorbehalten, Wetter ausgenommen. <span class="gloss">(All rights reserved, weather excepted.)</span></p>
+    </div>
+  </div>
+  <div class="q"><h3>Next steps</h3>
+    <p>Before building anything I would talk to people. How do you start a chat with someone you don’t know? How often do you talk about the weather, and do you moan about it? The answers would show whether Meckern is a real habit or just a stereotype, and they would rewrite the bench’s lines.</p>
+    <p>Then I would stage it. Actors, maybe a theatre group, play the bench and the strangers at a made-up tram stop, and we talk afterwards about what worked, what fell flat and what the bench should never say. It is a method from performative and speculative design: a rehearsal teaches a lot before any hardware exists, including what a talking bench does to the people around it.</p>
+    <p>Last comes a real bench at a real stop, tried out with real people. I want to know one thing: does anyone get past the weather, and if so, was it their idea or the bench’s?</p></div>
+  <div class="q"><h3>Limits</h3>
+    <p>This is a design fiction, not a study. I have not tested it with anyone yet, and the numbers describe weather talk in general, not benches.</p></div>
+  <p class="end"><a href="mailto:varuns@ik.me?subject=Wetterbank">Contact me to talk about weather among other things</a>.</p>
+</section>
+
+<section id="kalink">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>KaLink</h2>
+  <p class="meta">Applied research project, Hochschule Rhein-Waal · 2024 · with <a href="https://rs.linkedin.com/in/lunapopovic" target="_blank" rel="noopener">Luna Popovic</a> and <a href="https://www.linkedin.com/in/samakande/" target="_blank" rel="noopener">Samson Akande</a> · supervisors: <a href="https://www.researchgate.net/profile/Kai-Essig" target="_blank" rel="noopener">Prof. Dr. Kai Essig</a>, <a href="https://www.hochschule-rhein-waal.de/fakultaet-kommunikation-und-umwelt/organisation/gremien/pruefungsausschuss-1" target="_blank" rel="noopener">Prof. Frank Feyrer</a></p>
+  <figure class="cover"><img src="kalink-cover.jpg" alt="Three phone screens of the KaLink prototype: a community feed, a list of communities such as Language Exchange and Salsa, and the Language Exchange community page" width="1400" height="961"><figcaption>The KaLink prototype: communities where students and residents of Kamp-Lintfort can meet. <span class="note">[Figma link to be added]</span> You can click through the app there.</figcaption></figure>
+  <div class="q themes"><h3>Themes</h3>
+    <p>Social connection · Urban community · Language and cultural barriers · Human-centred design · Qualitative research</p></div>
+  <div class="q"><h3>Question</h3>
+    <p>How do international students and long-time residents of Kamp-Lintfort interact, and what keeps the two groups apart?</p></div>
+  <div class="q"><h3>Method</h3>
+    <p>We ran eight semi-structured interviews with students, university staff and residents aged 20 to 48, and analysed them with inductive thematic coding. From this we built four personas and ran four open card-sorting sessions. We then tested a clickable prototype with six participants, and a revised version with ten, using think-aloud sessions.</p></div>
+  <div class="q"><h3>What we found</h3>
+    <p>Students and residents lived in separate channels: separate WhatsApp and Facebook groups, so information about events rarely crossed from one group to the other. The language barrier sat underneath this. One student told us: “The other international students are in the same situation so we gather together, and I feel the locals have their whole life set here and I am an intruder.”</p>
+    <p>Both groups wanted shared events and ways to exchange goods and help. Out of this we designed an app with three parts: a community space, events and a marketplace. Participants in both rounds of testing received it positively.</p></div>
+  <div class="q"><h3>Limits</h3>
+    <p>We did not include older residents in the card sorting, the prototype is not fully functional, and we did not test whether the app would bring people together in practice.</p></div>
+  <div class="q"><h3>What it opened up</h3>
+    <p>The interviews were about more than an app. They were about how people from separate groups come to share a place. That is the question I would like to pursue beyond the screen.</p></div>
+  <p class="end"><a href="https://canva.link/tg80q8gftc7spo5" target="_blank" rel="noopener">Read the full report here</a>.</p>
+</section>
+
+<section id="about">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>About</h2>
+  <p>[Who you are and what you are curious about, in your own words. Your path runs from architecture to HCI to spatial and communication design: say what question connects those steps.]</p>
+</section>
+
+<section id="cv">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>CV</h2>
+  <h3 class="grp">Experience</h3>
+  <ul class="list" style="margin-top:.5rem">
+    <li class="job"><span>Communication and Spatial Designer at <a href="https://planwerkstatt.studio" target="_blank" rel="noopener">Planwerkstatt</a></span><small class="when">09/2024 – present</small><small>Bedburg-Hau, Germany</small></li>
+    <li class="job"><span>Academic Tutor to <a href="https://www.researchgate.net/profile/Kai-Essig" target="_blank" rel="noopener">Prof. Dr. Kai Essig</a></span><small class="when">10/2024 – 09/2025</small><small>Hochschule Rhein-Waal, Kamp-Lintfort, Germany</small><small>Modules of UX psychology and human-computer interaction</small></li>
+    <li class="job"><span>Designer and Design Intern, India</span><small class="when">06/2019 – 05/2023</small><small><a href="https://in.linkedin.com/in/anuj-desai-2b7839272" target="_blank" rel="noopener">ADA Studio</a>, <a href="https://ssdesignstudio.in" target="_blank" rel="noopener">SSDesignStudio</a>, <a href="https://www.instagram.com/studiovarij/" target="_blank" rel="noopener">CSA</a> and <a href="https://www.redstudio.in" target="_blank" rel="noopener">The Red Studio</a></small></li>
+  </ul>
+  <h3 class="grp">Education</h3>
+  <ul class="list" style="margin-top:.5rem">
+    <li class="job"><span>Master of Science in <a href="https://www.hochschule-rhein-waal.de/en/usability-engineering-msc" target="_blank" rel="noopener">Usability Engineering (HCI)</a></span><small class="when">10/2023 – 09/2025</small><small>Hochschule Rhein-Waal, Kamp-Lintfort, Germany</small><small>Grade: 1,5 (German grading scale)</small></li>
+    <li class="job"><span>Bachelor of Architecture in <a href="https://nuv.ac.in/schools/environmental-design-and-architecture/" target="_blank" rel="noopener">Urban Design and Sustainability</a></span><small class="when">09/2016 – 05/2022</small><small>Navrachana University, Vadodara, India</small></li>
+  </ul>
+  <p class="end">For more detail, see my full CV <span class="note">[link added once the CV is uploaded]</span></p>
+  <p class="end"><a href="#contact">Get in touch</a></p>
+</section>
+
+<section id="contact">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Contact</h2>
+  <p class="row"><a href="mailto:varuns@ik.me">Email</a><a href="https://www.linkedin.com/in/varunsangani" target="_blank" rel="noopener">LinkedIn</a></p>
+</section>
+
+<section id="impressum">
+  <a class="back" href="#home"><span aria-hidden="true">←</span> Index</a>
+  <h2>Impressum</h2>
+  <p class="meta">Legal notice according to § 5 DDG</p>
+  <h3>Responsible for this website</h3>
+  <p>Varun Sangani<br>Oberbilker Allee 254<br>40227 Düsseldorf<br>Germany</p>
+  <h3>Contact</h3>
+  <p>Email: <a href="mailto:varuns@ik.me">varuns@ik.me</a></p>
+  <h3>Responsible for content</h3>
+  <p>According to § 18 para. 2 MStV: Varun Sangani, address as above.</p>
+  <h3>Links to other websites</h3>
+  <p>This site links to external pages. I have no influence on their content and am not responsible for it. I checked the links when I added them, and I will remove a link if I learn that the page it leads to breaks the law.</p>
+  <h3>Copyright</h3>
+  <p>The texts and images on this site, including the project drawings and figures, are mine or made together with the people named on each page. Please ask before you reuse them.</p>
+</section>
+
+<button class="theme" type="button" aria-label="Switch to dark mode"><span></span></button>
+<button class="top" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
+</main>
+<script>
+(function(){
+  var ids=["home","protests","agile","kalink","wetterbank","speculation","about","cv","contact","impressum"];
+  function show(){
+    var h=(location.hash||"#home").slice(1);
+    if(ids.indexOf(h)<0)h="home";
+    ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)});
+    document.body.classList.toggle("no-top",h==="home"||h==="about"||h==="contact"||h==="impressum");
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",show);
+  document.querySelector(".homelink").addEventListener("click",function(){if((location.hash||"#home")==="#home")show()});
+  var root=document.documentElement,tb=document.querySelector(".theme");
+  function dark(){var t=root.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+  function label(){tb.setAttribute("aria-label",dark()?"Switch to light mode":"Switch to dark mode")}
+  try{var s=localStorage.getItem("theme");if(s)root.setAttribute("data-theme",s)}catch(e){}
+  label();
+  tb.addEventListener("click",function(){var n=dark()?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}label()});
+  show();
+})();
+</script>
+<script>
+(function(){
+  var R=[
+["Ihre Beschwerde wurde an das Wetter weitergeleitet. Bearbeitungszeit: unbestimmt.","Your complaint has been forwarded to the weather. Processing time: undetermined."],
+["Wir haben Ihr Anliegen aufgenommen. Das Wetter ist derzeit nicht erreichbar.","We have registered your concern. The weather is currently unavailable."],
+["Sie sind nicht allein: Heute haben sich schon 17 Personen beschwert. Wie heißen Sie?","You are not alone: 17 people have already complained today. What is your name?"],
+["Das Wetter hat Ihre Beschwerde gelesen und nimmt keine Stellung.","The weather has read your complaint and declines to comment."],
+["Ihre Beschwerde wurde an die zuständige Wolke weitergeleitet. Die Wolke ist im Urlaub.","Your complaint has been forwarded to the responsible cloud. The cloud is on holiday."],
+["Danke für Ihr Feedback. Leider können wir weder Regen noch Sonne garantieren.","Thank you for your feedback. Unfortunately we can guarantee neither rain nor sun."],
+["Ihr Anliegen wurde als „gefühlt kälter als gemessen“ eingestuft. Eine Antwort ist nicht vorgesehen.","Your concern has been classified as “feels colder than measured”. A reply is not planned."],
+["Ihre Beschwerde ist die dritte zu diesem Thema heute. Die Person neben Ihnen hat dieselbe eingereicht.","Your complaint is the third on this topic today. The person next to you filed the same one."],
+["Wir verstehen Sie. Dem Wetter ist das egal. Möchten Sie darüber sprechen?","We understand. The weather does not care. Would you like to talk about it?"],
+["Vielen Dank. Ihre Beschwerde wurde in Ordnung abgelegt, Ordner: „Schon wieder Montag“.","Thank you. Your complaint has been filed, folder: “Monday again”."],
+["Bitte warten Sie. Sie sind Nummer 212 in der Warteschlange. Vielleicht kennen Sie die Nummer 211?","Please wait. You are number 212 in the queue. Perhaps you know number 211?"],
+["Beschwerde abgelehnt: Das Wetter ist heute leider genau so, wie es ist. Wie heißen Sie?","Complaint rejected: today the weather is, unfortunately, exactly as it is. What is your name?"],
+["Ihre Beschwerde wurde angenommen. Die Person neben Ihnen beschwert sich auch. Fragen Sie nach dem Namen.","Your complaint has been accepted. The person next to you is complaining too. Ask for their name."],
+["Gemeinsam meckert es sich besser. Wie heißen Sie denn?","Grumbling is better together. So what is your name?"],
+["Das Wetter können wir nicht ändern, aber Ihren Tag. Fangen Sie mit Ihrem Namen an.","We cannot change the weather, but we can change your day. Start with your name."],
+["Beschwerde bearbeitet. Leider fehlt uns noch Ihr Name. Wie heißen Sie?","Complaint processed. Unfortunately we are still missing your name. What is your name?"],
+["Das Wetter lässt ausrichten: Reden Sie lieber mit jemandem, der antwortet. Wie heißen Sie?","The weather asks us to pass on: talk to someone who answers. What is your name?"],
+["Bis zur Antwort können Sie sich der nächsten Person auf der Bank vorstellen. Das geht schneller.","While you wait for an answer, you can introduce yourself to the next person on the bench. It is faster."],
+["Sie klingen, als hätten Sie mehr auf dem Herzen als das Wetter. Wie heißen Sie?","You sound like you have more on your mind than the weather. What is your name?"],
+["Ihre Beschwerde ist uns wichtig. Ihr Name auch. Wie heißen Sie?","Your complaint is important to us. So is your name. What is your name?"],
+["Beschwerde eingegangen. Tipp: Wer zusammen friert, kann sich auch vorstellen.","Complaint received. Tip: people who freeze together can also introduce themselves."]
+],n=0;
+  var forms=document.querySelectorAll("form.complaint");
+  Array.prototype.forEach.call(forms,function(f,idx){
+    var out=f.querySelector(".reply"),n=Math.floor(Math.random()*R.length)+idx*5;
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var r=R[n%R.length];n++;
+      var ref="WB-"+(1000+Math.floor(Math.random()*9000));
+      out.textContent="";
+      var a=document.createElement("p");a.textContent="Vorgang "+ref+": "+r[0];
+      var b=document.createElement("p");b.className="gloss";b.textContent=r[1];
+      out.appendChild(a);out.appendChild(b);out.className="reply has";
+    });
+  });
+})();
+</script>
+</body>
+</html>
