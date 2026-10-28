@@ -477,8 +477,15 @@ section.on{display:block}
   var forms=document.querySelectorAll("form.complaint");
   Array.prototype.forEach.call(forms,function(f,idx){
     var out=f.querySelector(".reply"),ta=f.querySelector("textarea"),n=Math.floor(Math.random()*R.length)+idx*5;
-    var touch=function(){f.classList.add("touched");};
-    ta.addEventListener("focus",touch);ta.addEventListener("input",touch);
+    var init=out.innerHTML,timer=null,answered=false;
+    var reset=function(){
+      if(!answered&&ta.value.trim()!=="")return;
+      ta.value="";out.innerHTML=init;out.className="reply";answered=false;
+      f.classList.remove("touched");
+      if(document.activeElement===ta)ta.blur();
+    };
+    var touch=function(){f.classList.add("touched");clearTimeout(timer);timer=setTimeout(reset,10000);};
+    ta.addEventListener("focus",touch);ta.addEventListener("input",touch);f.addEventListener("click",touch);
     ta.addEventListener("keydown",function(e){
       if(e.key==="Enter"&&!e.shiftKey&&!e.isComposing){
         e.preventDefault();
@@ -492,7 +499,7 @@ section.on{display:block}
       out.textContent="";
       var a=document.createElement("p");a.textContent="Vorgang "+ref+": "+r[0];
       var b=document.createElement("p");b.className="gloss";b.textContent=r[1];
-      out.appendChild(a);out.appendChild(b);out.className="reply has";
+      out.appendChild(a);out.appendChild(b);out.className="reply has";answered=true;
     });
   });
 })();
