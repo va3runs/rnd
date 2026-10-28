@@ -98,15 +98,16 @@ nav a:hover{color:var(--accent);text-decoration:none}
 .co-facts div{border-top:2px solid var(--line);padding-top:.4rem}
 .co-facts dt{margin:0;font-size:.82rem;color:var(--mute);letter-spacing:.02em}
 .co-facts dd{margin:.1rem 0 0;font-size:1.02rem;color:var(--ink)}
-.live-badge{display:inline-flex;align-items:center;gap:.4em;margin-left:.5rem;padding:.12em .65em;border-radius:999px;background:#0071e3;color:#fff;font-size:.72rem;letter-spacing:.04em;text-transform:none;vertical-align:.08em}
-.live-badge i{width:.5em;height:.5em;border-radius:50%;background:#fff;animation:wbdot 1.6s ease-in-out infinite}
-@keyframes wbdot{0%,100%{opacity:1}50%{opacity:.35}}
+.live-badge{display:inline-flex;align-items:center;gap:.5em;margin-left:.5rem;padding:.22em .85em .22em .75em;border-radius:999px;background:#1d1d1f;color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.03em;text-transform:none;vertical-align:.06em}
+.live-badge i{position:relative;flex:none;width:.6em;height:.6em;border-radius:50%;background:#30d158}
+.live-badge i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#30d158;animation:wbring 1.6s ease-out infinite}
+@keyframes wbring{0%{transform:scale(1);opacity:.75}100%{transform:scale(3);opacity:0}}
 .try-hint{margin:.1rem 0 .9rem;padding:.65rem .85rem;border:1px solid #0071e3;border-radius:12px;background:#f0f7ff;font-size:.95rem;line-height:1.45}
 .try-hint b{font-weight:500}
 .try-hint .gloss{display:block;margin-top:.15rem}
 @keyframes wbpulse{0%{box-shadow:0 0 0 0 rgba(0,113,227,.5)}70%{box-shadow:0 0 0 .55em rgba(0,113,227,0)}100%{box-shadow:0 0 0 0 rgba(0,113,227,0)}}
 .m-apple .complaint:not(.touched) textarea{border-color:#0071e3;animation:wbpulse 1.8s ease-out infinite}
-@media (prefers-reduced-motion:reduce){.live-badge i,.m-apple .complaint:not(.touched) textarea{animation:none}}
+@media (prefers-reduced-motion:reduce){.live-badge i::after,.m-apple .complaint:not(.touched) textarea{animation:none}}
 .co-h{margin:0 0 .3rem;font-size:.82rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .co-body .co-h:not(:first-child){margin-top:1.3rem}
 .co-body p.about{margin:0 0 .35rem;font-size:.98rem;line-height:1.5}
