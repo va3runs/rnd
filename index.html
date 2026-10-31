@@ -63,10 +63,12 @@ nav a:hover{color:var(--accent);text-decoration:none}
 .pages{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;margin-top:4rem}
 .pages span{color:var(--mute);font-size:1.25rem}
 .pages a{display:inline;padding:0;border:0;color:var(--link);font-size:1.25rem}
-.pages a.legal{font-size:1rem;color:var(--mute)}
-.pages a.carbon{margin-left:auto;font-size:1rem;color:var(--mute)}
-.pages .grade{display:inline-block;background:var(--note);color:var(--ink);font-size:inherit;font-weight:500;padding:.05em .45em;border-radius:5px;letter-spacing:.02em;text-decoration:none}
-.pages .arr{font-size:inherit;color:inherit}
+.pages a.legal{margin-left:auto;font-size:1rem;color:var(--mute)}
+.carbon-row{text-align:right;margin:.7rem 0 0}
+.carbon-row a{font-size:1rem;color:var(--mute)}
+.carbon-row a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.carbon-row .grade{display:inline-block;background:var(--note);color:var(--ink);font-size:inherit;font-weight:500;padding:.05em .45em;border-radius:5px;letter-spacing:.02em;text-decoration:none}
+.carbon-row .arr{font-size:inherit;color:inherit}
 .pages a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .grp{margin:2rem 0 0;font-size:1.05rem;font-weight:700}
 .grp.try{font-weight:400}
@@ -225,9 +227,9 @@ section.on{display:block}
     <a href="#cv">CV</a>
     <span aria-hidden="true">·</span>
     <a href="#contact">Contact</a>
-    <a class="carbon" href="https://www.websitecarbon.com/website/va3uns-github-io-rnd/" target="_blank" rel="noopener"><span class="grade">A+</span> Cleaner than 99% of web pages <span class="arr" aria-hidden="true">↗</span></a>
     <a class="legal" href="#impressum">Impressum</a>
   </nav>
+  <p class="carbon-row"><a href="https://www.websitecarbon.com/website/va3uns-github-io-rnd/" target="_blank" rel="noopener"><span class="grade">A+</span> Cleaner than 99% of web pages <span class="arr" aria-hidden="true">↗</span></a></p>
 
 </section>
 
