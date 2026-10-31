@@ -68,7 +68,10 @@ nav a:hover{color:var(--accent);text-decoration:none}
 .grp{margin:2rem 0 0;font-size:1.05rem;font-weight:700}
 .grp.try{font-weight:400}
 .cover{margin:1.25rem 0}
-.eco{margin:4rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:"Newsreader",ui-serif,"Times New Roman",serif;color:var(--mute);font-size:.9rem;line-height:1.45;text-wrap:balance}
+.eco{margin:3.5rem 0 0;font-family:"Newsreader",ui-serif,"Times New Roman",serif;font-size:.95rem;line-height:1.4}
+.eco a{display:inline-flex;align-items:center;gap:.55em;color:var(--mute);text-decoration:none}
+.eco a:hover{color:var(--link)}
+.eco .grade{background:var(--note);color:var(--ink);font-weight:500;padding:.1em .5em;border-radius:5px;letter-spacing:.02em}
 .ig{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;max-width:480px;margin:0 auto;background:#fff;color:#1d1d1f;border:1px solid #d2d2d7;border-radius:14px;overflow:hidden;--ink:#1d1d1f;--mute:#6e6e73;--line:#d2d2d7;--note:#fff;--red:#0071e3;--bg:#fff}
 .ig-head{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem}
 .ig-av{width:36px;height:36px;border-radius:9px;overflow:hidden;flex:none;display:block}
@@ -435,7 +438,7 @@ section.on{display:block}
   <p>Favicon: “Letter V” icon by <a href="https://www.flaticon.com/authors/mangmaru" target="_blank" rel="noopener">MangMARU</a> from <a href="https://www.flaticon.com/free-icon/letter-v_12810551" target="_blank" rel="noopener">Flaticon</a>.</p>
 </section>
 
-<p class="eco">This website is built to use very little energy: it scores A+ in an online energy test, better than 99% of web pages. <a href="https://www.websitecarbon.com/website/va3uns-github-io-rnd/" target="_blank" rel="noopener">See the result</a>.</p>
+<p class="eco"><a href="https://www.websitecarbon.com/website/va3uns-github-io-rnd/" target="_blank" rel="noopener"><span class="grade">A+</span>Cleaner than 99% of web pages <span aria-hidden="true">↗</span></a></p>
 
 <button class="theme" type="button" aria-label="Switch to dark mode"><span></span></button>
 <button class="top" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
